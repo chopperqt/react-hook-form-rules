@@ -1,9 +1,9 @@
 const REQUIRED_MESSAGE_TEXT = 'Это поле обязательное.';
 
 /**
- * Валидирует объект, проверяет если в нем значения
- * @param obj - Объект со значениями
- * @param message - Кастомное сообщение.
+ * Validates an object, checking if it contains values.
+ * @param obj - Object with values.
+ * @param message - Custom message.
  * 
  * @example rules: { validate: (obj) => getRequiredObjectRule(obj) }
  */

@@ -1,11 +1,11 @@
 import plural from "plural-ru";
 
 /**
- * Валидирует максимальную длину строки
- * @param maxLength - Максимальное количество символов для ввода
- * @param mrssage - Кастомное сообщение.
+ * Validates the maximum length of a string.
+ * @param maxLength - Maximum number of characters allowed.
+ * @param message - Custom message.
  *
- * @example rules: { maxLength: getMaxLengthRule(1000)}
+ * @example rules: { maxLength: getMaxLengthRule(1000) }
  */
 export const getMaxLengthRule = (maxLength: number, message?: string) => {
   const formattedMessage = `Максимальная длина ${maxLength} ${plural(

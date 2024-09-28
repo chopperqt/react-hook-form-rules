@@ -1,4 +1,4 @@
-const DEFAULT_MESSAGE = "Ссылка не соответствует формату"
+const DEFAULT_MESSAGE = "The link does not match the format."
 const DEFAULT_PATTERN = /(http(s)?):\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/
 
 interface UrlRule {
@@ -7,10 +7,10 @@ interface UrlRule {
 }
 
 /**
- * Возвращает правило, которое валидирует ввод url
- * @param options - Параметры.
- * @param options.pattern - Регулярное выражение.
- * @param options.message - Кастомное сообщение.
+ * Returns a rule that validates the input URL.
+ * @param options - Parameters.
+ * @param options.pattern - Regular expression.
+ * @param options.message - Custom message.
  * 
  * @example rules: { pattern: getUrlValidationRule() }
  */
