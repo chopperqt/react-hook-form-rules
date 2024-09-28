@@ -1,5 +1,3 @@
-import plural from "plural-ru";
-
 /**
  * Returns a rule that validates the minimum length of a string.
  * @param minLength - Minimum number of characters allowed.
@@ -8,12 +6,7 @@ import plural from "plural-ru";
  * @example rules: { minLength: getMinLengthRule(20) }
  */
 export const getMinLengthRule = (minLength: number, message?: string) => {
-  const formattedMessage = `Минимальная длина ${minLength} ${plural(
-    minLength,
-    "символ",
-    "символа",
-    "символов",
-  )}.`;
+  const formattedMessage = `Minimum length - ${minLength}`;
 
   return {
     value: minLength,

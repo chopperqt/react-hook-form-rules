@@ -1,4 +1,4 @@
-const REQUIRED_MESSAGE_TEXT = 'Это поле обязательное.';
+import { REQUIRED_MESSAGE_TEXT } from "../constants";
 
 /**
  * Validates an array, checking if it contains values.
@@ -7,6 +7,6 @@ const REQUIRED_MESSAGE_TEXT = 'Это поле обязательное.';
  * 
  * @example rules: { validate: (arr) => getRequiredArrayRule(arr) }
  */
-export const getRequiredArrayRule = (arr: unknown[] = [], message?: string) => {
+export const getRequiredArrayRule = (arr: unknown[], message?: string) => {
   return arr.length > 0 || (message || REQUIRED_MESSAGE_TEXT);
 };

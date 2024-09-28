@@ -1,4 +1,4 @@
-const REQUIRED_MESSAGE_TEXT = 'Это поле обязательное.';
+import { REQUIRED_MESSAGE_TEXT } from "../constants";
 
 /**
  * Validates an object, checking if it contains values.
@@ -7,7 +7,7 @@ const REQUIRED_MESSAGE_TEXT = 'Это поле обязательное.';
  * 
  * @example rules: { validate: (obj) => getRequiredObjectRule(obj) }
  */
-export const getRequiredObjectRule = (obj: Record<string, unknown> = {}, message?: string) => {
+export const getRequiredObjectRule = (obj: Record<string, unknown>, message?: string) => {
   const formattedMessage = message || REQUIRED_MESSAGE_TEXT;
 
   if (!obj) {

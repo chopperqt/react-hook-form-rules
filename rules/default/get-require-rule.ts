@@ -1,4 +1,4 @@
-const REQUIRED_MESSAGE_TEXT = 'Это поле обязательное.';
+import { REQUIRED_MESSAGE_TEXT } from "../constants";
 
 /**
  * Validates a required field.

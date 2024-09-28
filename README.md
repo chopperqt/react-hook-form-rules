@@ -20,8 +20,8 @@ This rule makes the field required.
 #### Options
 | Option  | Type | Default | Description  |
 | -------- | --------- | ------ | ----------  |
-| isRequired | boolean | true  |  |
-| message | string | "This field is required." |  . |
+| isRequired | boolean | true  | Dynamic parameter that indicates whether the field is required. |
+| message | string | "This field is required." | Custom message. |
 
 #### Code example
 ```
@@ -48,8 +48,8 @@ This rule makes the array field required.
 #### Options
 | Option  | Type | Default | Description  |
 | -------- | --------- | ------ | ----------  |
-| arr | array | []  |  |
-| message | string | "This field is required." |   |
+| arr | array | -  | Array of values.  |
+| message | string | "This field is required." | Custom message.  |
 
 
 #### Code example
@@ -76,8 +76,8 @@ This rule makes the object field required.
 #### Options
 | Option  | Type | Default | Description  |
 | -------- | --------- | ------ | ----------  |
-| obj | object | {}  |  |
-| message | string | "This field is required." |   |
+| obj | object | -  | Object with values. |
+| message | string | "This field is required." | Custom message.  |
 
 
 #### Code example
@@ -102,8 +102,8 @@ This rule returns an error if the number is greater than the specified value.
 #### Options
 | Option  | Type | Default | Description  |
 | -------- | --------- | ------ | ----------  |
-| max | number | -  | - |
-| message | string | - |  - |
+| max | number | -  | Maximum number. |
+| message | string | - |  Custom message. |
 
 #### Code example
 ```
@@ -127,8 +127,8 @@ This rule checks that the number of characters in the string does not exceed the
 #### Options
 | Option  | Type | Default | Description  |
 | -------- | --------- | ------ | ----------  |
-| maxLength | number | -  | - |
-| message | string | - |  - |
+| maxLength | number | -  | Maximum number of characters allowed. |
+| message | string | - |  Custom message. |
 
 ### Code example
 ```
@@ -153,9 +153,9 @@ This rule returns an error if the number of values in the array exceeds the spec
 #### Options
 | Option  | Type | Default | Description  |
 | -------- | --------- | ------ | ----------  |
-| arr | arrray | -  | - |
-| maxLength | number | -  | - |
-| message | string | - |  - |
+| arr | arrray | -  | Array of values. |
+| maxLength | number | -  | Maximum number of values. |
+| message | string | - |  Custom message |
 
 #### Code example
 ```
@@ -178,8 +178,8 @@ This rule checks that the string contains a minimum number of characters.
 #### Options
 | Option  | Type | Default | Description  |
 | -------- | --------- | ------ | ----------  |
-| min | number | -  | - |
-| message | string | - |  - |
+| min | number | -  | Minimum number. |
+| message | string | - |  Custom message. |
 
 #### Code example
 ```
@@ -203,8 +203,8 @@ The rule checks that the string contains at least the specified number of charac
 #### Options
 | Option  | Type | Default | Description  |
 | -------- | --------- | ------ | ----------  |
-| minLength | number | -  | - |
-| message | string | - |  - |
+| minLength | number | -  | Minimum number of characters allowed. |
+| message | string | - |  Custom message |
 
 #### Code example
 ```
@@ -228,9 +228,9 @@ The rule checks that the array contains a minimum number of elements.
 #### Options
 | Option  | Type | Default | Description  |
 | -------- | --------- | ------ | ----------  |
-| arr | arrray | -  | - |
-| minLength | number | -  | - |
-| message | string | - |  - |
+| arr | arrray | -  | Array of values. |
+| minLength | number | -  | Maximum number of values. |
+| message | string | - |  Custom message |
 
 #### Code example
 ```
@@ -251,8 +251,9 @@ he rule checks the entered email for correctness.
 #### Options
 | Option  | Type | Default | Description  |
 | -------- | --------- | ------ | ----------  |
-| pattern | RegExp | -  | - |
-| message | string | - |  - |
+| props | object | - | Object with values |
+| props.pattern | RegExp | -  | Regular expression. |
+| props.message | string | - |  Custom message |
 
 #### Code example
 ```
@@ -276,8 +277,9 @@ The rule checks the entered URL for correctness.
 #### Options
 | Option  | Type | Default | Description  |
 | -------- | --------- | ------ | ----------  |
-| pattern | RegExp | -  | - |
-| message | string | - |  - |
+| props | object | - | Object with values |
+| props.pattern | RegExp | -  | Regular expression. |
+| props.message | string | - |  Custom message |
 
 #### Code example
 ```
@@ -289,7 +291,3 @@ const {...} = useController({
   }}
 })
 ```
-
-
-
-
