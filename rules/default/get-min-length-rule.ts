@@ -6,7 +6,7 @@
  * @example rules: { minLength: getMinLengthRule(20) }
  */
 export const getMinLengthRule = (minLength: number, message?: string) => {
-  const formattedMessage = `Minimum length - ${minLength}`;
+  const formattedMessage = `Minimum length - ${minLength}.`;
 
   return {
     value: minLength,

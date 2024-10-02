@@ -6,7 +6,7 @@
  * @example rules: { maxLength: getMaxLengthRule(1000) }
  */
 export const getMaxLengthRule = (maxLength: number, message?: string) => {
-  const formattedMessage = `Maximum length - ${maxLength}`;
+  const formattedMessage = `Maximum length - ${maxLength}.`;
 
   return {
     value: maxLength,
